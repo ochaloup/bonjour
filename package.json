@@ -26,7 +26,8 @@
     "keycloak-connect": "^2.4.0",
     "opentracing": "^0.13.0",
     "opossum": "^0.5.1",
-    "roi": "~0.13.0"
+    "roi": "~0.13.0",
+    "request": "~2.81.0"
   },
   "devDependencies": {
     "eslint": "~3.11.1",
