@@ -33,5 +33,12 @@ Execute bonjour locally with Docker
 
 3. The application will be running at: <http://localhost:8080/api/bonjour>
 
+Running with LRA
+----------------
 
+        npm install && npm start --http.port=8484 --lra.http.host=localhost
+
+Checking with curl - simulating the LRA header
+
+        curl -i -H 'Long-Running-Action:http://localhost:8180/lra-coordinator' -X GET http://localhost:8484/api/bonjour
 

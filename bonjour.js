@@ -50,7 +50,12 @@ app.use('/api', api.routes(memoryStore));
 // default route (should be swagger)
 app.get('/', (req, res) => res.send('Logged out'));
 
-const server = app.listen(8080, '0.0.0.0', () => {
+
+// --port=8181
+var port = 8080
+if(process.env.npm_config_http_port) port = process.env.npm_config_http_port
+
+const server = app.listen(port, '0.0.0.0', () => {
   const host = server.address().address;
   const port = server.address().port;
 
